@@ -1,0 +1,60 @@
+<section class="container py-2">
+    <button class="btn btn-danger" routerLink=""><i class="fas fa-arrow-left"></i></button>
+    <h2 class="text-center">Agregar usuario</h2>
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 col-sn-8 col-md-10 col-lg-8 ">
+            <form class="form" [formGroup]="addUserForm" (ngSubmit)="addUsersForm()">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" formControlName="nombre" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="apelidoPat">Apellido Paterno</label>
+                    <input type="text" class="form-control" id="apellidoPat" formControlName="apellidoPat" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="apellidoMat">Apellido Materno</label>
+                    <input type="text" class="form-control" id="apellidoMat" formControlName="apellidoMat" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="xxx@mail.com" formControlName="email" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="fechaNaci">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNaci" formControlName="fechaNaci" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="fechaIngre">Fecha de Ingreso</label>
+                    <input type="date" class="form-control" id="fechaIngre" formControlName="fechaIngre" autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!addUserForm.valid">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div class="my-4">
+        <h3><strong>Usuarios registrados</strong></h3>
+        <table class="table my-3">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Email</th>
+                    <th>Creado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let arr of arrayForm">
+                    <!-- <tr *ngFor="let user of users"> -->
+                    <td>{{ arr.id }}</td>
+                    <td>{{ arr.nombre }}</td>
+                    <td>{{ arr.apelidoPat}}</td>
+                    <td>{{ arr.email}}</td>
+                    <td>{{ arr.createdAt }}</td>
+                    <!-- apellidoMat -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

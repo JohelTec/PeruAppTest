@@ -1,0 +1,14 @@
+<section class="container py-2">
+        <button class="btn btn-danger" routerLink=""><i class="fas fa-arrow-left"></i></button>
+        <div class="row d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ user?.avatar }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div><strong>ID: </strong><span>{{ user.id }}</span></div>
+                    <div><strong>Nombre: </strong><span>{{ user.first_name }}</span></div>
+                    <div><strong>Apellido: </strong><span>{{ user.last_name }}</span></div>
+                </div>
+        </div>
+    </div>
+</section>
+    

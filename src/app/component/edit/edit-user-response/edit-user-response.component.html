@@ -1,0 +1,17 @@
+<section class="container py-2">
+    <button class="btn btn-danger" (click)="back()"><i class="fas fa-arrow-left"></i></button>
+    <div class="row d-flex justify-content-center my-3">
+        <div class="card" style="width: 40rem;">
+            <h1 class="p-3">Respuesta del API Usuario Editado</h1>
+            <div class="card-body">
+                <p><span><strong>Nombre: </strong></span>{{ obj.nombre }}</p>
+                <p><span><strong>Apelido Paterno: </strong> </span>{{ obj.apellidoPat }}</p>
+                <p><span><strong>Apellido Materno: </strong></span>{{ obj.apellidoMat }}</p>
+                <p><span><strong>Email: </strong></span>{{ obj.email }}</p>
+                <p><span><strong>Fecha de Ingreso: </strong></span>{{ obj.fechaIngre }}</p>
+                <p><span><strong>Fecha de nacimiento: </strong></span>{{ obj.fechaNaci }}</p>
+                <p><span><strong>Actualizado: </strong></span>{{ obj.updatedAt }}</p>
+            </div>
+        </div>
+    </div>
+</section>
